@@ -1,0 +1,309 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1208526083616376}
+  m_IsPrefabAsset: 1
+--- !u!1 &1208526083616376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4767623960353594}
+  - component: {fileID: 114743346156048466}
+  - component: {fileID: 114630440718860696}
+  - component: {fileID: 114951315409583290}
+  - component: {fileID: 114423205612758144}
+  - component: {fileID: 114614772153266418}
+  - component: {fileID: 114526460515376710}
+  - component: {fileID: 114591805585316634}
+  - component: {fileID: 114498568029858160}
+  m_Layer: 0
+  m_Name: Tether Ability
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4767623960353594
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208526083616376}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114423205612758144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208526083616376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 580d8b19f9c50427e810401370e9231d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPerformed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: GameActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnCancelled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: GameActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  actor: {fileID: 0}
+  castTime: 1
+  castTrigger: Cast 1
+  animator: {fileID: 0}
+  turnAction: {fileID: 0}
+  castPoint: {x: 0, y: 0, z: 0}
+  castRadius: 5
+  bindRadius: 4
+  maxTetherDist: 4
+  duration: 3
+  vfxPrefab: {fileID: 198370530308635548, guid: 50fdd82e9c8f944c79a331fda27ffc03,
+    type: 2}
+--- !u!114 &114498568029858160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208526083616376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a05f95a335c4a1eb9cebea1115f96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desc: Max Distance
+  level: {fileID: 114614772153266418}
+  currentLevel: 0
+  values:
+  - 4
+  - 3.5
+  - 3
+  - 0
+  OnValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114423205612758144}
+        m_MethodName: set_MaxTetherDist
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114526460515376710
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208526083616376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a05f95a335c4a1eb9cebea1115f96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desc: Duration
+  level: {fileID: 114614772153266418}
+  currentLevel: 0
+  values:
+  - 3
+  - 3
+  - 4
+  - 5
+  OnValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114423205612758144}
+        m_MethodName: set_Duration
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114591805585316634
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208526083616376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a05f95a335c4a1eb9cebea1115f96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desc: Bind Radius
+  level: {fileID: 114614772153266418}
+  currentLevel: 0
+  values:
+  - 5
+  - 5
+  - 9
+  - 13
+  OnValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114423205612758144}
+        m_MethodName: set_BindRadius
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114614772153266418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208526083616376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7409a3a1d8ee14eeb930fe91791aa7bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current: 0
+  max: 3
+  OnLevelChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: IntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114630440718860696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208526083616376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff95d122468042b58c733890bf9f8c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statName: Cooldown
+  baseValue:
+    value: 0
+    min: 0
+    max: 20
+  cachedCurrent:
+    value: 0
+    min: 0
+    max: 0
+--- !u!114 &114743346156048466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208526083616376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba409dbb16fcf44dc88c3fc51f411b1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 11
+  abilityName: Tether
+  icon: {fileID: 21300000, guid: a19cebe0599724c469f757f6e0b2d9a4, type: 3}
+  descTemplate: 
+  tooltipPrefab: {fileID: 114780603525632006, guid: c229d420cad5343ec8be9011d39b6107,
+    type: 2}
+  propertiesTemplate: 
+  action: {fileID: 114423205612758144}
+  startCast:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114951315409583290}
+        m_MethodName: StartTargeting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  cooldown: {fileID: 114630440718860696}
+--- !u!114 &114951315409583290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208526083616376}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceaa475ccaf674c1c8bc2f9cd4fbcf6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTargeted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114423205612758144}
+        m_MethodName: set_CastPoint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114423205612758144}
+        m_MethodName: Perform
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Vector3Event, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onCancelled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  mouseButton: 0
+  layers:
+  - Terrain
+  cam: {fileID: 0}
+  inputManager: {fileID: 0}
+  origin: {fileID: 0}
+  ui: {fileID: 0}
+  targetingMessage: Select a target
+  messageColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  arrow: {fileID: 0}

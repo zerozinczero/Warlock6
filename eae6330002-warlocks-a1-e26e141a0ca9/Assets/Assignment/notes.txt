@@ -1,0 +1,9 @@
+Assignment Notes
+
+Assignment: 1
+Student: Gene Peterson
+
+What are the controls for the locally controlled unit?
+Right click on the map to move to that point.
+'S' key stops any movements in progress.
+Escape returns to main menu.

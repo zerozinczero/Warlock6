@@ -1,0 +1,465 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1501760440944478}
+  m_IsPrefabAsset: 1
+--- !u!1 &1501760440944478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4074804059408632}
+  - component: {fileID: 114822448947700840}
+  - component: {fileID: 114933743853867480}
+  - component: {fileID: 114849399802625270}
+  - component: {fileID: 114341718857950218}
+  - component: {fileID: 114316916079082944}
+  - component: {fileID: 114480600551124694}
+  - component: {fileID: 114352983804631582}
+  - component: {fileID: 114002577390393440}
+  - component: {fileID: 114169434574532520}
+  - component: {fileID: 114164656815402874}
+  - component: {fileID: 114246213008449072}
+  - component: {fileID: 114618673859865562}
+  m_Layer: 0
+  m_Name: Gravity Well Ability
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4074804059408632
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501760440944478}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114002577390393440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501760440944478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a05f95a335c4a1eb9cebea1115f96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desc: Cooldown
+  level: {fileID: 114480600551124694}
+  currentLevel: 0
+  values:
+  - 12
+  - 12
+  - 10
+  - 8
+  OnValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114933743853867480}
+        m_MethodName: set_Duration
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114164656815402874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501760440944478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a05f95a335c4a1eb9cebea1115f96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desc: Inner Force
+  level: {fileID: 114480600551124694}
+  currentLevel: 0
+  values:
+  - 0
+  - 500
+  - 600
+  - 700
+  OnValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114341718857950218}
+        m_MethodName: set_InnerForce
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114169434574532520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501760440944478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a05f95a335c4a1eb9cebea1115f96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desc: Duration
+  level: {fileID: 114480600551124694}
+  currentLevel: 0
+  values:
+  - 3
+  - 3
+  - 4
+  - 5
+  OnValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114341718857950218}
+        m_MethodName: set_Duration
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114246213008449072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501760440944478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a05f95a335c4a1eb9cebea1115f96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desc: Outer Radius
+  level: {fileID: 114480600551124694}
+  currentLevel: 0
+  values:
+  - 0
+  - 5
+  - 7
+  - 9
+  OnValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114341718857950218}
+        m_MethodName: set_OuterRadius
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114316916079082944
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501760440944478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab150caf41a2442ed8c200a713e1e457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPerformed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: GameActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnCancelled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: GameActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  direction: {x: 0, y: 0, z: 1}
+  target: {fileID: 0}
+  turnSpeed: 360
+--- !u!114 &114341718857950218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501760440944478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 145778b32014a4771b5d88391c77ad60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPerformed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: GameActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnCancelled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: GameActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  actor: {fileID: 0}
+  castTime: 1
+  castTrigger: Cast 1
+  animator: {fileID: 0}
+  turnAction: {fileID: 114316916079082944}
+  vfxPrefab: {fileID: 1147743331741182, guid: bbc0ec02057d94f55924cdcd63bba679, type: 2}
+  vfxOffset: {x: 0, y: 0.5, z: 0}
+  location: {x: 0, y: 0, z: 0}
+  duration: 5
+  setupTime: 1
+  innerRadius: 1
+  innerForce: 300
+  outerRadius: 5
+  outerForce: 100
+  forceCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &114352983804631582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501760440944478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a05f95a335c4a1eb9cebea1115f96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desc: Cast Time
+  level: {fileID: 114480600551124694}
+  currentLevel: 0
+  values:
+  - 0.6
+  - 0.6
+  - 0.5
+  - 0.4
+  OnValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114341718857950218}
+        m_MethodName: set_CastTime
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114480600551124694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501760440944478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7409a3a1d8ee14eeb930fe91791aa7bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current: 0
+  max: 3
+  OnLevelChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: IntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114618673859865562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501760440944478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a05f95a335c4a1eb9cebea1115f96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desc: Outer Force
+  level: {fileID: 114480600551124694}
+  currentLevel: 0
+  values:
+  - 0
+  - 100
+  - 200
+  - 300
+  OnValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114341718857950218}
+        m_MethodName: set_OuterForce
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114822448947700840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501760440944478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba409dbb16fcf44dc88c3fc51f411b1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 4
+  abilityName: Gravity Well
+  icon: {fileID: 21300000, guid: 05e2d6af00483bc42a42f768f4505213, type: 3}
+  descTemplate: 
+  tooltipPrefab: {fileID: 114780603525632006, guid: c229d420cad5343ec8be9011d39b6107,
+    type: 2}
+  propertiesTemplate: 
+  action: {fileID: 114341718857950218}
+  startCast:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114849399802625270}
+        m_MethodName: StartTargeting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  cooldown: {fileID: 114933743853867480}
+--- !u!114 &114849399802625270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501760440944478}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceaa475ccaf674c1c8bc2f9cd4fbcf6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTargeted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114341718857950218}
+        m_MethodName: set_Location
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114341718857950218}
+        m_MethodName: Perform
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Vector3Event, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onCancelled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  mouseButton: 0
+  layers:
+  - Terrain
+  cam: {fileID: 0}
+  inputManager: {fileID: 0}
+  origin: {fileID: 0}
+  ui: {fileID: 0}
+  targetingMessage: Select a target
+  messageColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  arrow: {fileID: 0}
+--- !u!114 &114933743853867480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1501760440944478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff95d122468042b58c733890bf9f8c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statName: 
+  baseValue:
+    value: 0
+    min: 0
+    max: 0
+  cachedCurrent:
+    value: 0
+    min: 0
+    max: 0

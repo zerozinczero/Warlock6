@@ -1,0 +1,306 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1219101144289908}
+  m_IsPrefabAsset: 1
+--- !u!1 &1219101144289908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4758553151052916}
+  - component: {fileID: 114536673006495214}
+  - component: {fileID: 114918833747214328}
+  - component: {fileID: 114792695892977136}
+  - component: {fileID: 114058240666221190}
+  - component: {fileID: 114954634602572112}
+  - component: {fileID: 114949381097861738}
+  - component: {fileID: 114490054029907316}
+  - component: {fileID: 114362796970008456}
+  m_Layer: 0
+  m_Name: Teleport Ability
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4758553151052916
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1219101144289908}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114058240666221190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1219101144289908}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceaa475ccaf674c1c8bc2f9cd4fbcf6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTargeted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114792695892977136}
+        m_MethodName: set_Target
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114792695892977136}
+        m_MethodName: Perform
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Vector3Event, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onCancelled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  mouseButton: 0
+  layers:
+  - Terrain
+  cam: {fileID: 0}
+  inputManager: {fileID: 0}
+  origin: {fileID: 0}
+  ui: {fileID: 0}
+  targetingMessage: Select a target
+  messageColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  arrow: {fileID: 0}
+--- !u!114 &114362796970008456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1219101144289908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a05f95a335c4a1eb9cebea1115f96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desc: Cooldown
+  level: {fileID: 114954634602572112}
+  currentLevel: 0
+  values:
+  - 15
+  - 15
+  - 12
+  - 9
+  OnValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114918833747214328}
+        m_MethodName: set_Duration
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114490054029907316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1219101144289908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a05f95a335c4a1eb9cebea1115f96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desc: Max Distance
+  level: {fileID: 114954634602572112}
+  currentLevel: 0
+  values:
+  - 5
+  - 5
+  - 10
+  - 15
+  OnValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114792695892977136}
+        m_MethodName: set_MaxDistance
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114536673006495214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1219101144289908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba409dbb16fcf44dc88c3fc51f411b1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3
+  abilityName: Teleport
+  icon: {fileID: 21300000, guid: df5153fca31c9bf47b2d36359b5dd373, type: 3}
+  descTemplate: 
+  tooltipPrefab: {fileID: 114780603525632006, guid: c229d420cad5343ec8be9011d39b6107,
+    type: 2}
+  propertiesTemplate: 
+  action: {fileID: 114792695892977136}
+  startCast:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114058240666221190}
+        m_MethodName: StartTargeting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  cooldown: {fileID: 114918833747214328}
+--- !u!114 &114792695892977136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1219101144289908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a2b40bbca2347678be405f05636f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPerformed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: GameActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnCancelled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: GameActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  actor: {fileID: 0}
+  castTime: 1
+  castTrigger: Cast 3
+  animator: {fileID: 0}
+  turnAction: {fileID: 0}
+  maxDistance: 10
+  collisionCheckRadius: 0.5
+  target: {x: 3.5605927, y: 2.6412048, z: 0.96839905}
+  poofPrefab: {fileID: 1965343156803978, guid: aa8d6482d70a23445b4b2a928ed1b845, type: 2}
+--- !u!114 &114918833747214328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1219101144289908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff95d122468042b58c733890bf9f8c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statName: 
+  baseValue:
+    value: 0
+    min: 0
+    max: 0
+  cachedCurrent:
+    value: 0
+    min: 0
+    max: 0
+--- !u!114 &114949381097861738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1219101144289908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a05f95a335c4a1eb9cebea1115f96d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desc: Cast Time
+  level: {fileID: 114954634602572112}
+  currentLevel: 0
+  values:
+  - 0.5
+  - 0.5
+  - 0.25
+  - 0.1
+  OnValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114792695892977136}
+        m_MethodName: set_CastTime
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114954634602572112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1219101144289908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7409a3a1d8ee14eeb930fe91791aa7bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current: 0
+  max: 3
+  OnLevelChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: IntEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null

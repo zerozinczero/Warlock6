@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9378766350f244242bcee93a0d6eb90a, type: 3}
+  m_Name: Tether Purchasable
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  game: {fileID: 0}
+  cellPrefab: {fileID: 114576385780467904, guid: b431302d931c844d9876553527274d4e,
+    type: 2}
+  abilityPrefab: {fileID: 114743346156048466, guid: 5e1299f9a276c4f80b2adf7f4f91cae6,
+    type: 2}
+  upgradeCosts: 050000000500000005000000
+  currentUpgrade: -1
